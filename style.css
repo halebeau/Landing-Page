@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-    display: block;
+    display: inline;
 }
 
 header {
@@ -54,7 +54,8 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #04e097;
 }
 
 a:active {
@@ -137,7 +138,7 @@ form {
 
 .grid {
     display: flex;
-} 
+}
 
 #features .desc {
     display: flex;
@@ -185,9 +186,13 @@ section {
     align-items: center;
     text-align: center;
     width: calc(100% / 3);
-    margin: 10px;
+    margin: 20px;
     border: 1px solid #000;
     border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .level {
@@ -199,15 +204,15 @@ section {
     font-weight: 700;
 }
 
-.product > h2 {
+.product>h2 {
     margin-top: 15px;
 }
 
-.product > ol {
+.product>ol {
     margin: 15px 0;
 }
 
-.product > button {
+.product>button {
     border: 0;
     margin: 15px 0;
     background-color: #f1c40f;
@@ -220,12 +225,30 @@ section {
 }
 
 footer {
+    display: block;
+    width: 100%;
     margin-top: 30px;
     background-color: #ddd;
-    padding: 20px;
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
- /* RESPONSIVENESS */
+span {
+    color: #979c9a;
+}
+
+iframe {
+    border: solid 1px #555;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* RESPONSIVENESS */
 
 @media (max-width: 600px) {
     header {
@@ -242,15 +265,16 @@ footer {
         align-items: center;
         text-align: center;
         padding: 0 50px;
-    }
-    nav {
         font-weight: 400;
+    }
+    .logo > img {
+        margin: 0 auto;
     }
     ul {
         flex-direction: column;
     }
     li {
-        padding-bottom: 5px;
+        padding-bottom: 10px;
     }
     #hero {
         margin-top: 120px;
@@ -273,6 +297,6 @@ footer {
         max-width: 300px;
         width: 100%;
         margin: 0 auto;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 }
